@@ -1,0 +1,476 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Triflux Engineerings</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- 
+  Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<!-- Add this in your <head> -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <style>
+
+
+.card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #ffffff, #f8f9fa);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    color: #333;
+  }
+
+  .card:hover {
+    transform: translateY(-10px) scale(1.02);
+    background: linear-gradient(135deg, #e0f7fa, #ffffff);
+    box-shadow: 0 12px 24px rgba(0, 123, 255, 0.3);
+  }
+
+  .card h4 {
+    color: #007BFF;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 123, 255, 0.1);
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+  }
+
+  .card p {
+    color: #555;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 8px;
+  }
+
+  .card:hover h4 {
+    color: #0056b3;
+  }
+
+  .card:hover p {
+    color: #000;
+  }
+
+  .card p::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 2px;
+    background: #007BFF;
+    transition: width 0.4s ease;
+    margin-top: 4px;
+  }
+
+  .card:hover p::after {
+    width: 100%;
+  }
+
+  /* AOS animations */
+  [data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+  }
+
+
+      .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        border-radius: 12px;
+      }
+    
+      .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+      }
+    
+      .card h4, .card p {
+        transition: color 0.3s ease;
+      }
+    
+      .card:hover h4 {
+        color: #007BFF;
+      }
+    
+      .card:hover p {
+        color: #343a40;
+      }
+    
+      .card p::after {
+        content: '';
+        display: block;
+        width: 0%;
+        height: 2px;
+        background: #007BFF;
+        transition: width 0.3s ease;
+      }
+    
+      .card:hover p::after {
+        width: 100%;
+      }
+    
+      /* Smooth reveal on scroll using AOS */
+      [data-aos] {
+        opacity: 0;
+        transition-property: opacity, transform;
+      }
+    </style>
+    
+</head>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000,
+    once: true
+  });
+</script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({ duration: 1000, once: true });
+</script>
+<script>
+  window.addEventListener('scroll', function () {
+    const btn = document.querySelector('.whatsapp-float');
+    if (window.scrollY > 100) {
+      btn.style.display = 'flex';
+    } else {
+      btn.style.display = 'none';
+    }
+  });
+</script>
+
+
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <img src="WhatsApp Image 2025-06-03 at 7.40.32 PM.jpeg" alt="Logo" class="logo-img" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#overview">Overview</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="industriesDropdown" role="button" data-bs-toggle="dropdown">
+              Sales
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#mining">SPARES</a></li>
+              <li><a class="dropdown-item" href="#energy">PARTS SALES</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="#expertise">Expertise</a></li>
+          <li class="nav-item"><a class="nav-link" href="#insights">Insights</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+
+<section id="overview" class="hero-section">
+    <div class="container">
+      <h1 class="display-4 fw-bold">Innovate , Build , Maintain</h1>
+      <p class="lead">We offer a wide range of services which include maintanance and installation  of various mechenical end electrical engineering products </p>
+      <a href="#contact" class="btn btn-warning btn-lg mt-3">Contact Us</a>
+    </div>
+  </section>
+  
+  
+<!--servicess-->
+  <section id="services" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4" data-aos="fade-down">Our Services</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="card p-4 shadow">
+            <h4>Energy Solutions</h4>
+            <p>Solar System Installation and Maintenance, Solar Panel Cleaning</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="card p-4 shadow">
+            <h4>Maintenance</h4>
+            <p>Solar System Maintenance, Camera and Wi-Fi Installation, Air Conditioning Maintenance and Installation</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="card p-4 shadow">
+            <h4>Installation</h4>
+            <p>Stand-by Generator Maintenance and Installation, House Wiring and LV Maintenance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- OUR WORK SECTION -->
+<section id="our-work" class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="mb-5" data-aos="fade-up">Our Work</h2>
+      <div class="row">
+        
+        <!-- Work Item 1 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="100">
+          <div class="work-card" style="background-image: url('WhatsApp\ Image\ 2025-06-03\ at\ 9.16.06\ PM-3.jpeg');">
+            <div class="overlay">
+              <h4>Generator Maintenance</h4>
+              <a href="#contact" class="btn btn-primary mt-3">Request a Quote</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Work Item 2 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="150">
+          <div class="work-card" style="background-image: url('WhatsApp\ Image\ 2025-06-03\ at\ 9.02.25\ PM.jpeg');">
+            <div class="overlay">
+              <h4>Camera & Wi-Fi Setup</h4>
+              <a href="#contact" class="btn btn-primary mt-3">Request a Quote</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Work Item 3 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
+          <div class="work-card" style="background-image: url('WhatsApp\ Image\ 2025-06-03\ at\ 9.01.52\ PM.jpeg');">
+            <div class="overlay">
+              <h4>Generator Maintenance</h4>
+              <a href="#contact" class="btn btn-primary mt-3">Request a Quote</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Work Item 4 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="250">
+          <div class="work-card" style="background-image: url('WhatsApp\ Image\ 2025-06-03\ at\ 8.59.31\ PM\ \(1\).jpeg');">
+            <div class="overlay">
+              <h4>Engine Inspection</h4>
+              <a href="#contact" class="btn btn-primary mt-3">Request a Quote</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Work Item 5 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
+          <div class="work-card" style="background-image: url('WhatsApp\ Image\ 2025-06-03\ at\ 8.26.09\ PM.jpeg');">
+            <div class="overlay">
+              <h4>Solar Installation</h4>
+              <a href="#contact" class="btn btn-primary mt-3">Request a Quote</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Work Item 6 -->
+        <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-delay="350">
+          <div class="work-card" style="background-image: url('WhatsApp\ Image\ 2025-06-03\ at\ 9.01.52\ PM.jpeg');">
+            <div class="overlay">
+              <h4>Battery Installation</h4>
+              <a href="#contact" class="btn btn-primary mt-3">Request a Quote</a>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+
+<!--Expertise section-->
+
+<section id="expertise" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="section-title mb-5" data-aos="fade-up">Our Expertise</h2>
+      <div class="row">
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="expertise-box">
+            <i class="fas fa-solar-panel icon"></i>
+            <h4>Solar Systems</h4>
+            <p>Design, Installation & Maintenance of solar energy systems.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="expertise-box">
+            <i class="fas fa-tools icon"></i>
+            <h4>Maintenance</h4>
+            <p>Air conditioning, generator servicing, and electrical upkeep.</p>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="expertise-box">
+            <i class="fas fa-bolt icon"></i>
+            <h4>Wiring & Installations</h4>
+            <p>Home wiring, standby generator setups, and more.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-- Insights Section -->
+<section id="insights" class="py-5 bg-white">
+    <div class="container text-center">
+      <h2 class="mb-5 text-dark" data-aos="fade-up">Industry Insights</h2>
+      <div class="row">
+        
+        <!-- Insight Card 1 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="insight-card shadow-sm p-4">
+            <h5>Why Solar is the Future</h5>
+            <p>Explore how solar energy is reshaping power systems in Africa and what it means for your home or business.</p>
+            <a href="#" class="btn btn-outline-warning btn-sm mt-2">Read More</a>
+          </div>
+        </div>
+  
+        <!-- Insight Card 2 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="insight-card shadow-sm p-4">
+            <h5>Smart Surveillance Trends</h5>
+            <p>Learn how AI and IoT are transforming camera systems and security setups in modern homes.</p>
+            <a href="#" class="btn btn-outline-warning btn-sm mt-2">Read More</a>
+          </div>
+        </div>
+  
+        <!-- Insight Card 3 -->
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="insight-card shadow-sm p-4">
+            <h5>Battery Storage in 2025</h5>
+            <p>Understand the latest developments in energy storage and how to optimize your solar setup with batteries.</p>
+            <a href="#" class="btn btn-outline-warning btn-sm mt-2">Read More</a>
+          </div>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+
+<!-- Contact Section -->
+<section id="contact" class="py-5" style="background: #f9f9f9;" >
+    <div class="container text-center">
+      <h2 class="mb-4">Get in Touch</h2>
+      <form action="https://formspree.io/f/myzjyqew" method="POST">
+        <div class="mb-3">
+          <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+        </div>
+        <div class="mb-3">
+          <input type="email" name="email" class="form-control" placeholder="Your Email" required />
+        </div>
+        <div class="mb-3">
+          <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-warning">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+<!-- Location Section -->
+<section id="location" class="py-5 bg-light">
+    <div class="container text-center">
+      <h2 class="mb-4" data-aos="fade-up">Our Location</h2>
+      <div class="map-container" data-aos="zoom-in">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3570.611421122838!2d29.207026675247547!3d-26.517340576876023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1eeb1292a6185ab1%3A0x2d5186fe87c3270c!2s1%20Oliver%20Tambo%20Dr%2C%20Secunda%2C%202302!5e0!3m2!1sen!2sza!4v1717440789453!5m2!1sen!2sza" 
+          width="100%" 
+          height="400" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+  
+<!-- Footer Section -->
+<footer class="footer bg-dark text-light py-5">
+    <div class="container">
+      <div class="row">
+  
+        <!-- Company Info -->
+        <div class="col-md-4 mb-4">
+          <h4 class="text-warning mb-3">TRIFLUX ENGINEERING</h4>
+          <p>1 Oliver Tambo Dr, Secunda, 2302<br>South Africa</p>
+          <p>Email: <a href="mailto:info@yourcompany.com" class="text-light">trifluxengineering@gmail.com</a></p>
+          <p>Phone: <a href="tel:+2711234567" class="text-light">+27 7333 40366</a></p>
+        </div>
+  
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-4">
+          <h5 class="text-warning mb-3">Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="#services" class="footer-link">Services</a></li>
+            <li><a href="#our-work" class="footer-link">Our Work</a></li>
+            <li><a href="#expertise" class="footer-link">Expertise</a></li>
+            <li><a href="#contact" class="footer-link">Contact</a></li>
+            <li><a href="#location" class="footer-link">Location</a></li>
+          </ul>
+        </div>
+  
+        <!-- Social Media -->
+<div class="col-md-4 mb-4">
+    <h5 class="text-warning mb-3">Connect With Us</h5>
+    <div class="d-flex gap-3">
+      <!-- Facebook -->
+    <a href="https://www.facebook.com/trifluxengineering" target="_blank" class="social-icon" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/yourhandle" target="_blank" class="social-icon">
+        <i class="fab fa-instagram"></i>
+      </a>
+  
+      <!-- WhatsApp (linked with your number +27 73 334 0366) -->
+    <a href="https://wa.me/27733340366?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" class="social-icon">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+  
+       <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/company/triflux-engineering" target="_blank" class="social-icon" title="LinkedIn">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+  
+      <hr class="border-light" />
+      <p class="text-center mb-0">© 2025 TRIFLUX ENGINEERING (pty) Ltd . All rights reserved.</p>
+    </div>
+  </footer>
+  
+<!-- Hidden iframe for Google Forms -->
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+<!-- WhatsApp Floating Button -->
+<a
+  href="https://wa.me/0733340366?text=Hello!%20I%20would%20like%20to%20learn%20more."
+  class="whatsapp-float"
+  target="_blank"
+  aria-label="Chat on WhatsApp"
+>
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+</a>
+
+
+</body>
+</html>
