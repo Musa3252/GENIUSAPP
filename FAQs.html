@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1234567890123456" crossorigin="anonymous"></script>
+  <title>FAQs - TRIFLUX ENGINEERING</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(to right, #003366, #005599);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2.75rem;
+      font-weight: 700;
+      margin-bottom: 0.3rem;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+    main {
+      max-width: 900px;
+      margin: 2rem auto 4rem auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+      padding: 2rem 2.5rem;
+    }
+    .faq-item {
+      margin-bottom: 1.75rem;
+    }
+    .faq-item h3 {
+      color: #003366;
+      cursor: pointer;
+      position: relative;
+      padding-right: 25px;
+    }
+    .faq-item h3::after {
+      content: "\f107"; /* FontAwesome chevron down */
+      font-family: "Font Awesome 6 Free";
+      font-weight: 900;
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1rem;
+      transition: transform 0.3s ease;
+    }
+    .faq-item.collapsed h3::after {
+      transform: rotate(-180deg);
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      color: #333;
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+      border-left: 3px solid #ffc107;
+    }
+    .faq-item.expanded .faq-answer {
+      max-height: 300px;
+    }
+    /* Back button */
+    .btn-back {
+      display: block;
+      width: fit-content;
+      margin: 3rem auto 0;
+      background-color: #ffc107;
+      color: #003366;
+      font-weight: 600;
+      border-radius: 6px;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(255, 193, 7, 0.4);
+      transition: background-color 0.3s ease;
+    }
+    .btn-back:hover {
+      background-color: #e6ac00;
+      color: #001f3f;
+    }
+    /* Footer */
+    footer.footer {
+      background-color: #222;
+      color: #ddd;
+      padding: 3rem 1rem 2rem 1rem;
+    }
+    footer.footer h4,
+    footer.footer h5 {
+      color: #ffc107;
+      margin-bottom: 1rem;
+    }
+    footer.footer a {
+      color: #ddd;
+      text-decoration: none;
+    }
+    footer.footer a:hover {
+      color: #ffc107;
+    }
+    .social-icon i {
+      font-size: 1.4rem;
+      color: #ddd;
+      transition: color 0.3s ease;
+    }
+    .social-icon:hover i {
+      color: #ffc107;
+    }
+    .d-flex.gap-3 a {
+      margin-right: 1rem;
+    }
+    @media (max-width: 576px) {
+      main {
+        margin: 1rem;
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Frequently Asked Questions</h1>
+    <p>Your questions about Solar, Generators, and Electrical Maintenance — answered.</p>
+  </header>
+
+  <main>
+    <div class="faq-item" id="faq1">
+      <h3>What types of solar systems do you install?</h3>
+      <div class="faq-answer">
+        <p>We install grid-tied, off-grid, and hybrid solar systems designed for residential, commercial, and industrial applications tailored to your needs.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq2">
+      <h3>How long does a solar installation take?</h3>
+      <div class="faq-answer">
+        <p>Installations typically take between 1 to 3 days depending on system size and site specifics, with minimal disruption.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq3">
+      <h3>Do you provide maintenance for solar panels?</h3>
+      <div class="faq-answer">
+        <p>Yes, we offer regular cleaning and maintenance services to ensure your solar panels operate at peak efficiency year-round.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq4">
+      <h3>What kind of generators do you install?</h3>
+      <div class="faq-answer">
+        <p>We install petrol, diesel, and gas-powered generators from trusted brands, suitable for both residential backup and commercial power solutions.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq5">
+      <h3>How often should my generator be serviced?</h3>
+      <div class="faq-answer">
+        <p>Generators should be serviced at least once a year or after 100 operational hours to maintain reliability and performance.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq6">
+      <h3>What electrical maintenance services do you offer?</h3>
+      <div class="faq-answer">
+        <p>Our services include inspections, repairs, rewiring, fault finding, switchboard upgrades, and safety compliance checks.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq7">
+      <h3>Can you help with emergency electrical repairs?</h3>
+      <div class="faq-answer">
+        <p>Yes, we provide prompt emergency repair services to keep your electrical systems safe and operational.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq8">
+      <h3>Are your technicians certified?</h3>
+      <div class="faq-answer">
+        <p>All our technicians are fully qualified, certified, and experienced in solar, generator, and electrical systems.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq9">
+      <h3>How do I know if my electrical system needs maintenance?</h3>
+      <div class="faq-answer">
+        <p>Signs include flickering lights, frequent outages, tripped breakers, unusual smells or sounds, and outdated wiring. Contact us for an inspection.</p>
+      </div>
+    </div>
+
+    <div class="faq-item" id="faq10">
+      <h3>Do you offer warranties on your installations?</h3>
+      <div class="faq-answer">
+        <p>Yes, we provide manufacturer warranties on equipment and workmanship guarantees on all our installations.</p>
+      </div>
+    </div>
+
+    <a href="index.html" class="btn-back">← Back to Home</a>
+  </main>
+
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+
+        <!-- Company Info -->
+        <div class="col-md-4 mb-4">
+          <h4>TRIFLUX ENGINEERING</h4>
+          <p>1 Oliver Tambo Dr, Secunda, 2302<br>South Africa</p>
+          <p>Email: <a href="mailto:trifluxengineering@gmail.com">trifluxengineering@gmail.com</a></p>
+          <p>Phone: <a href="tel:+27733340366">+27 73 334 0366</a></p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#our-work">Our Work</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="index.html#location">Location</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="col-md-4 mb-4">
+          <h5>Connect With Us</h5>
+          <div class="d-flex gap-3">
+            <a href="https://www.facebook.com/trifluxengineering" target="_blank" title="Facebook" class="social-icon">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.instagram.com/yourhandle" target="_blank" class="social-icon" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/27733340366?text=Hello%2C%20I%27m%20interested%20in%20your%20services." target="_blank" class="social-icon" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/company/triflux-engineering" target="_blank" title="LinkedIn" class="social-icon">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <hr class="border-light" />
+      <p class="text-center mb-0">© 2025 TRIFLUX ENGINEERING (pty) Ltd. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Simple toggle for FAQ expand/collapse
+    document.querySelectorAll('.faq-item h3').forEach(faqHeader => {
+      faqHeader.addEventListener('click', () => {
+        const faqItem = faqHeader.parentElement;
+        faqItem.classList.toggle('expanded');
+      });
+    });
+  </script>
+
+</body>
+</html>
