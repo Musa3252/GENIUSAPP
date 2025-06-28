@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Email Signup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
+      padding: 2rem;
+    }
+    form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      font-size: 1rem;
+    }
+    #message {
+      text-align: center;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="signup-form">
+    <h2>Subscribe to our newsletter</h2>
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <button type="submit">Sign Up</button>
+    <p id="message"></p>
+  </form>
+
+  <script>
+    document.getElementById('signup-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const messageEl = document.getElementById('message');
+
+      try {
+        const response = await fetch('http://localhost:3000/signup', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ email })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          messageEl.textContent = data.message;
+          messageEl.style.color = 'green';
+          document.getElementById('signup-form').reset();
+        } else {
+          messageEl.textContent = data.error || 'Something went wrong.';
+          messageEl.style.color = 'red';
+        }
+      } catch (error) {
+        messageEl.textContent = 'Failed to connect to the server.';
+        messageEl.style.color = 'red';
+        console.error(error);
+      }
+    });
+  </script>
+
+</body>
+</html>
