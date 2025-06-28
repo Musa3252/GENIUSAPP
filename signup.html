@@ -2,80 +2,27 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Newsletter Signup | Triflux Engineering</title>
-  
-  <!-- Meta Tags -->
-  <meta name="description" content="Subscribe to Triflux Engineering's newsletter for the latest on solar, generator, and energy storage solutions." />
-  <meta name="keywords" content="Triflux Engineering, newsletter, solar updates, generator tips, energy solutions" />
-  <meta name="author" content="Triflux Engineering" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Triflux Engineering Newsletter" />
-  <meta property="og:description" content="Get the latest energy trends and solutions delivered to your inbox." />
-  <meta property="og:type" content="website" />
-
-  <!-- Styles -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet" />
-
+  <title>Email Signup</title>
   <style>
     body {
-      font-family: 'Open Sans', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-
-    .hero {
-      background: linear-gradient(to right, #003366, #005599);
-      color: white;
-      text-align: center;
-      padding: 4rem 2rem;
-    }
-
-    .hero h1 {
-      font-size: 2.5rem;
-    }
-
-    .content {
-      max-width: 900px;
-      margin: auto;
-      padding: 3rem 2rem;
-    }
-
-    .content h2 {
-      color: #003366;
-      margin-bottom: 1rem;
-    }
-
-    .newsletter-form {
-      background-color: white;
+      font-family: Arial, sans-serif;
+      background-color: #f3f3f3;
       padding: 2rem;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-      max-width: 500px;
-      margin: 3rem auto;
     }
-
-    .newsletter-form input,
-    .newsletter-form button {
+    form {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      max-width: 400px;
+      margin: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input, button {
       width: 100%;
       padding: 1rem;
       margin: 0.5rem 0;
       font-size: 1rem;
     }
-
-    .newsletter-form button {
-      background-color: #003366;
-      color: white;
-      border: none;
-      transition: background-color 0.3s ease;
-    }
-
-    .newsletter-form button:hover {
-      background-color: #002244;
-    }
-
     #message {
       text-align: center;
       font-weight: bold;
@@ -84,69 +31,18 @@
   </style>
 </head>
 <body>
-  <section class="hero">
-    <h1>Join the Triflux Newsletter</h1>
-    <p>Stay informed about solar tech, battery storage, and generator innovations across South Africa.</p>
-  </section>
 
-  <section class="content">
-    <h2>Why Subscribe?</h2>
-    <p>Get practical insights and updates on our engineering solutions, including case studies, energy tips, and exclusive offers delivered directly to your inbox.</p>
-
-    <h2>What to Expect</h2>
-    <ul>
-      <li> Monthly updates on battery technology</li>
-      <li> Exclusive project insights and innovations</li>
-      <li> Smart solutions for a sustainable Africa</li>
-      <li> Special offers from Triflux Engineering</li>
-    </ul>
-
-    <div class="newsletter-form">
-      <h3 class="text-center">Subscribe to Our Newsletter</h3>
-      <form id="signup-form">
-        <input type="email" id="email" placeholder="Enter your email" required />
-        <button type="submit">Sign Up</button>
-        <p id="message"></p>
-      </form>
-    </div>
-  </section>
-
-  <footer class="bg-dark text-light py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h5 class="text-warning">TRIFLUX ENGINEERING</h5>
-          <p>1 Oliver Tambo Dr, Secunda, 2302<br/>South Africa</p>
-          <p>Email: <a href="mailto:trifluxengineering@gmail.com" class="text-light">trifluxengineering@gmail.com</a></p>
-          <p>Phone: <a href="tel:+27733340366" class="text-light">+27 7333 40366</a></p>
-        </div>
-        <div class="col-md-4">
-          <h5 class="text-warning">Quick Links</h5>
-          <ul class="list-unstyled">
-            <li><a href="#services" class="text-light">Services</a></li>
-            <li><a href="#our-work" class="text-light">Our Work</a></li>
-            <li><a href="#contact" class="text-light">Contact</a></li>
-            <li><a href="#location" class="text-light">Location</a></li>
-          </ul>
-        </div>
-        <div class="col-md-4">
-          <h5 class="text-warning">Connect With Us</h5>
-          <div class="d-flex gap-3">
-            <a href="https://www.facebook.com/trifluxengineering" target="_blank" class="text-light"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/trifluxengineering" target="_blank" class="text-light"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/27733340366?text=Hello%2C%20I'm%20interested%20in%20your%20services." target="_blank" class="text-light"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://www.linkedin.com/triflux-engineering" target="_blank" class="text-light"><i class="fab fa-linkedin-in"></i></a>
-          </div>
-        </div>
-      </div>
-      <hr class="border-light" />
-      <p class="text-center mb-0">© 2025 TRIFLUX ENGINEERING (Pty) Ltd. All rights reserved.</p>
-    </div>
-  </footer>
+  <form id="signup-form">
+    <h2>Subscribe to our newsletter</h2>
+    <input type="email" id="email" placeholder="Enter your email" required />
+    <button type="submit">Sign Up</button>
+    <p id="message"></p>
+  </form>
 
   <script>
     document.getElementById('signup-form').addEventListener('submit', async function (e) {
       e.preventDefault();
+
       const email = document.getElementById('email').value;
       const messageEl = document.getElementById('message');
 
@@ -176,6 +72,7 @@
       }
     });
   </script>
+
 </body>
 </html>
 
