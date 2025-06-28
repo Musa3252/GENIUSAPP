@@ -7,9 +7,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-const uri = "mongodb+srv://triflux:Telkom800!1@email.fafmvfb.mongodb.net/?retryWrites=true&w=majority&appName=Email";
+// ✅ Use the fixed connection string with encoded password
+const uri = "mongodb+srv://triflux:Telkom800%211%40email@cluster0.fafmvfb.mongodb.net/emailDB?retryWrites=true&w=majority";
 
-// Create the MongoClient ONCE (outside the route)
 const client = new MongoClient(uri, {
   serverApi: {
     version: ServerApiVersion.v1,
@@ -20,25 +20,24 @@ const client = new MongoClient(uri, {
 
 let emailsCollection;
 
-// Connect to MongoDB ONCE when the server starts
 client.connect()
   .then(() => {
     const db = client.db("emailDB");
     emailsCollection = db.collection("emails");
     console.log("✅ Connected to MongoDB");
 
-    // Start server only after DB is connected
-    app.listen(3000, () => {
-      console.log("✅ Server running at http://localhost:3000");
+    // Start server
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+      console.log(`✅ Server running at http://localhost:${port}`);
     });
   })
   .catch(err => {
     console.error("❌ Failed to connect to MongoDB:", err);
   });
 
-// Handle form submission
 app.post('/signup', async (req, res) => {
-  const { email } = req.body;
+  const { email, name, company } = req.body;
 
   if (!email) {
     return res.status(400).json({ error: "Email is required." });
@@ -47,6 +46,8 @@ app.post('/signup', async (req, res) => {
   try {
     await emailsCollection.insertOne({
       email,
+      name: name || null,
+      company: company || null,
       createdAt: new Date()
     });
 
