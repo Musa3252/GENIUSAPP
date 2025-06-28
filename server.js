@@ -7,8 +7,9 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
-// ✅ Use the fixed connection string with encoded password
-const uri = "mongodb+srv://triflux:Telkom800%211%40email@cluster0.fafmvfb.mongodb.net/emailDB?retryWrites=true&w=majority";
+// ✅ Encode special characters in the password:
+// Telkom800!1 → Telkom800%211
+const uri = "mongodb+srv://triflux:Telkom800%211@cluster0.fafmvfb.mongodb.net/emailDB?retryWrites=true&w=majority&appName=Email";
 
 const client = new MongoClient(uri, {
   serverApi: {
@@ -26,18 +27,17 @@ client.connect()
     emailsCollection = db.collection("emails");
     console.log("✅ Connected to MongoDB");
 
-    // Start server
-    const port = process.env.PORT || 3000;
-    app.listen(port, () => {
-      console.log(`✅ Server running at http://localhost:${port}`);
+    app.listen(3000, () => {
+      console.log("✅ Server running at http://localhost:3000");
     });
   })
   .catch(err => {
     console.error("❌ Failed to connect to MongoDB:", err);
   });
 
+// ✅ Handle incoming signup requests
 app.post('/signup', async (req, res) => {
-  const { email, name, company } = req.body;
+  const { name, email, company } = req.body;
 
   if (!email) {
     return res.status(400).json({ error: "Email is required." });
@@ -45,9 +45,9 @@ app.post('/signup', async (req, res) => {
 
   try {
     await emailsCollection.insertOne({
+      name,
       email,
-      name: name || null,
-      company: company || null,
+      company,
       createdAt: new Date()
     });
 
